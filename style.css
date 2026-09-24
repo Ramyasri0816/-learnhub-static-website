@@ -1,0 +1,742 @@
+/* ------------------------------
+   BASIC SETTINGS
+------------------------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #ffffff;
+}
+
+
+/* ------------------------------
+   NAVIGATION
+------------------------------ */
+
+nav {
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 8%;
+
+    background-color: white;
+
+    box-shadow: 0 2px 10px #ddd;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #06a3da;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.menu a:hover {
+    color: #06a3da;
+}
+
+
+/* ------------------------------
+   HERO
+------------------------------ */
+
+.hero {
+    min-height: 600px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 70px 8%;
+
+    background-color: #eef9ff;
+}
+
+.hero-content {
+    width: 50%;
+}
+
+.small-heading,
+.section-title {
+    color: #06a3da;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    line-height: 1.15;
+    margin-bottom: 25px;
+    color: #222;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.hero-image {
+    width: 45%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+/* ------------------------------
+   BUTTON
+------------------------------ */
+
+button {
+    border: none;
+    background-color: #06a3da;
+    color: white;
+
+    padding: 13px 25px;
+
+    font-size: 16px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #078dbb;
+}
+
+
+/* ------------------------------
+   SEARCH
+------------------------------ */
+
+.search-section {
+    text-align: center;
+
+    padding: 45px 20px;
+
+    background-color: #06a3da;
+
+    color: white;
+}
+
+.search-section h2 {
+    margin-bottom: 20px;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+}
+
+.search-box input {
+    width: 450px;
+
+    padding: 15px;
+
+    border: none;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+.search-box button {
+    border-radius: 0;
+    background-color: #222;
+}
+
+
+/* ------------------------------
+   ABOUT
+------------------------------ */
+
+.about {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+
+    padding: 90px 8%;
+}
+
+.about-image {
+    width: 50%;
+}
+
+.about-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+
+    border-radius: 10px;
+}
+
+.about-content {
+    width: 50%;
+}
+
+.about-content h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+
+/* ------------------------------
+   STATISTICS
+------------------------------ */
+
+.statistics {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+
+    padding: 50px 8%;
+
+    background-color: #eef9ff;
+}
+
+.statistics h2 {
+    color: #06a3da;
+    font-size: 35px;
+}
+
+.statistics p {
+    margin-top: 8px;
+}
+
+
+/* ------------------------------
+   WHY CHOOSE US
+------------------------------ */
+
+.why {
+    text-align: center;
+
+    padding: 90px 8%;
+}
+
+.why > h2,
+.courses > h2,
+.instructors > h2,
+.testimonials > h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.why-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+    margin-top: 45px;
+}
+
+.why-card {
+    width: 30%;
+
+    padding: 35px 25px;
+
+    border: 1px solid #eee;
+
+    border-radius: 10px;
+
+    background-color: white;
+}
+
+.why-card:hover {
+    box-shadow: 0 5px 20px #ddd;
+}
+
+.icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.why-card h3 {
+    margin-bottom: 15px;
+}
+
+.why-card p {
+    line-height: 1.6;
+}
+
+
+/* ------------------------------
+   COURSES
+------------------------------ */
+
+.courses {
+    text-align: center;
+
+    padding: 90px 8%;
+
+    background-color: #f7f7f7;
+}
+
+.course-description {
+    margin-bottom: 40px;
+}
+
+.course-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+.course-card {
+    background-color: white;
+
+    text-align: left;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow: 0 3px 10px #ddd;
+}
+
+.course-card img {
+    width: 100%;
+    height: 200px;
+
+    object-fit: cover;
+}
+
+.course-content {
+    padding: 25px;
+}
+
+.level {
+    color: #06a3da;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+.course-content h3 {
+    font-size: 23px;
+
+    margin: 10px 0;
+}
+
+.course-content p {
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+}
+
+
+/* ------------------------------
+   OFFER
+------------------------------ */
+
+.offer {
+    padding: 80px 8%;
+
+    background-color: #06a3da;
+
+    color: white;
+
+    text-align: center;
+}
+
+.offer .section-title {
+    color: white;
+}
+
+.offer h2 {
+    font-size: 40px;
+
+    margin-bottom: 20px;
+}
+
+.offer p {
+    margin-bottom: 25px;
+
+    line-height: 1.6;
+}
+
+.offer button {
+    background-color: white;
+    color: #06a3da;
+}
+
+
+/* ------------------------------
+   INSTRUCTORS
+------------------------------ */
+
+.instructors {
+    text-align: center;
+
+    padding: 90px 8%;
+}
+
+.instructor-container {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+
+    margin-top: 45px;
+}
+
+.instructor-card {
+    border: 1px solid #eee;
+
+    padding-bottom: 25px;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.instructor-card img {
+    width: 100%;
+
+    height: 250px;
+
+    object-fit: cover;
+}
+
+.instructor-card h3 {
+    margin-top: 20px;
+
+    margin-bottom: 8px;
+}
+
+.instructor-card p {
+    color: #666;
+
+    margin-bottom: 8px;
+}
+
+
+/* ------------------------------
+   TESTIMONIALS
+------------------------------ */
+
+.testimonials {
+    text-align: center;
+
+    padding: 90px 8%;
+
+    background-color: #eef9ff;
+}
+
+.review-container {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    margin-top: 45px;
+}
+
+.review {
+    width: 30%;
+
+    background-color: white;
+
+    padding: 35px;
+
+    border-radius: 10px;
+}
+
+.stars {
+    color: #f5b400;
+
+    font-size: 20px;
+
+    margin-bottom: 20px;
+}
+
+.review p {
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+}
+
+.review h3 {
+    margin-bottom: 5px;
+}
+
+
+/* ------------------------------
+   CONTACT
+------------------------------ */
+
+.contact {
+    display: flex;
+
+    gap: 80px;
+
+    padding: 90px 8%;
+}
+
+.contact-info {
+    width: 45%;
+}
+
+.contact-info h2 {
+    font-size: 40px;
+
+    margin-bottom: 20px;
+}
+
+.contact-info > p {
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    width: 50%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+
+    padding: 15px;
+
+    border: 1px solid #ddd;
+
+    font-family: Arial;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #06a3da;
+}
+
+
+/* ------------------------------
+   FOOTER
+------------------------------ */
+
+footer {
+    background-color: #222;
+
+    color: white;
+
+    padding: 60px 8% 20px;
+}
+
+.footer-container {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+
+    gap: 40px;
+}
+
+.footer-container h2 {
+    color: #06a3da;
+
+    margin-bottom: 15px;
+}
+
+.footer-container h3 {
+    margin-bottom: 20px;
+}
+
+.footer-container a {
+    display: block;
+
+    color: #ddd;
+
+    text-decoration: none;
+
+    margin-bottom: 12px;
+}
+
+.footer-container a:hover {
+    color: #06a3da;
+}
+
+.footer-container p {
+    color: #ccc;
+
+    margin-bottom: 12px;
+}
+
+.copyright {
+    text-align: center;
+
+    border-top: 1px solid #444;
+
+    margin-top: 40px;
+
+    padding-top: 20px;
+}
+
+
+/* ------------------------------
+   RESPONSIVE DESIGN
+------------------------------ */
+
+@media (max-width: 900px) {
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content,
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-image {
+        margin-top: 40px;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .about-image,
+    .about-content {
+        width: 100%;
+    }
+
+    .course-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .instructor-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    nav {
+        height: auto;
+
+        flex-direction: column;
+
+        padding: 20px;
+    }
+
+    .menu {
+        margin-top: 15px;
+
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .search-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-box input {
+        width: 100%;
+    }
+
+    .statistics {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .why-cards {
+        flex-direction: column;
+    }
+
+    .why-card {
+        width: 100%;
+    }
+
+    .course-container {
+        grid-template-columns: 1fr;
+    }
+
+    .instructor-container {
+        grid-template-columns: 1fr;
+    }
+
+    .review-container {
+        flex-direction: column;
+    }
+
+    .review {
+        width: 100%;
+    }
+
+    .contact {
+        flex-direction: column;
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 100%;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+}
